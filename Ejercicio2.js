@@ -12,3 +12,15 @@ const movies = [
 ];
 
 // Dada una lista de películas, cuenta cuántas son de antes del año 2000 y cuántas son posteriores, utilizando un bucle. 
+function movieYear(movies){
+for(movie of movies){
+  if(movie.releaseYear<2000){
+    console.log("PELICULA ANTERIOR AL AÑO 2000",movie.title, "año de estreno :",movie.releaseYear );
+  }else{
+    console.log("PELICULA POSTERIOR AL AÑO 2000",movie.title, "año de estreno :",movie.releaseYear );
+  }
+}
+}
+
+movieYear(movies);
+
