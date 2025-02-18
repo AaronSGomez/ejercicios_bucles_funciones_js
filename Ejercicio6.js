@@ -13,4 +13,18 @@ const starWarsMovies = [
 ];
 
 //Agrupa las películas de Star Wars por década de lanzamiento en un objeto donde las claves son las décadas y los valores son arrays de películas. 
+const decadaPeli= [{decada:'' , peliculas: []}]; //tipo de array a usar
+let cont=0; 
 
+for(let i=1970 ; i<2030 ;i+=10){ //for para las decadas 
+for(movie of starWarsMovies){
+    if(movie.releaseYear>=i && movie.releaseYear<i+10){
+        // console.log(movie.title,"esta pelicula es de la decada de :",i); probador de decadas
+        decadaPeli[cont]={ decada: i , peliculas: movie};
+        cont++;
+    }
+}
+}
+
+
+console.log(decadaPeli);
